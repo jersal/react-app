@@ -1,0 +1,25 @@
+which contain crud oprations and front-end to back-end integration
+
+react reference ;https://www.youtube.com/watch?v=idvCKXXFGs4&list=PLillGF-RfqbZjJBAu0sx_0SCuFdzdx4iY&index=2
+
+*************************************************************************************************************
+1.sudo npm install -g create-react-app
+2.create-react-app react-test
+3.cd react-test
+4.npm start
+ we can set port to start our application,In package.json edit
+{
+ "start": "set PORT=3001 && react-scripts start",
+}
+Dependencies:
+**************
+1.npm install react-bootstrap --save 
+(then install the specific version)
+2. npm install bootstrap@4 --save
+Routing:
+********
+3.npm install --save react-router react-router-dom
+
+get/post/put/delete 
+********************
+4.npm install axios --save

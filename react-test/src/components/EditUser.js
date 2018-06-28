@@ -36,14 +36,14 @@ class EditUser extends Component {
             }).catch(err =>
                 console.log(err));
     }
-    EditUser(newUser){
-            axios.request({
-                method:'put',
-                url:`http://localhost:3000/api/meetupzs/${this.state.user_id}`,
-                data:newUser
-            }).then(response =>{
-                this.props.history.push('/');
-            }).catch(err => console.log(err));
+    EditUser(newUser) {
+        axios.request({
+            method: 'put',
+            url: `http://localhost:3000/api/meetupzs/${this.state.user_id}`,
+            data: newUser
+        }).then(response => {
+            this.props.history.push('/');
+        }).catch(err => console.log(err));
     }
     onSubmit(e) {
         const newUser = {
@@ -56,14 +56,13 @@ class EditUser extends Component {
         this.EditUser(newUser);
         e.preventDefault();
     }
-    handleInputChange(e){
+    handleInputChange(e) {
         const target = e.target;
         const value = target.value;
         const name = target.name;
         this.setState({
-            [name]:value
+            [name]: value
         });
-
     }
     render() {
         return (
@@ -101,10 +100,8 @@ class EditUser extends Component {
                     <input type="submit" value="Save" className="btn" />
                 </form>
             </div>
-
         )
     }
-
 }
 
 export default EditUser;
